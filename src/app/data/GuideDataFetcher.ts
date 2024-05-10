@@ -9,7 +9,7 @@ export default class GuideDataFetcher {
       // `https://resourcifyme.web.app`;
       "";
 
-    const res = await fetch(`http://localhost:3000/${filePath}`);
+    const res = await fetch(`https://wingme-dev-next-git-main-ujjwal-chadhas-projects.vercel.app/${filePath}`);
     if (res.status !== 200) {
       throw new HttpError(res.status, res.statusText)
     }
