@@ -23,7 +23,7 @@ export const Features = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
               </svg>,
           title: "A personalized easy to follow roadmap",
-          desc: "From building your profile, to studying for the interviews and until you get a job, you'll get our easy to follow roadmap"
+          desc: "From building your profile, to studying for the interviews and until you get a job, you&apos;ll get our easy to follow roadmap"
       },
       {
           icon:
@@ -59,7 +59,7 @@ export const Features = () => {
                       How we help?
                   </h3>
                   <p className="mt-3">
-                      We are industry experts who understand exactly what you need to succeed. Here's what we do for you:
+                      We are industry experts who understand exactly what you need to succeed. Here&apos;s what we do for you:
                   </p>
               </div>
               <div className="mt-12">
