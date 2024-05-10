@@ -9,7 +9,7 @@ export default class GuideDataFetcher {
       // `https://resourcifyme.web.app`;
       "";
 
-    const res = await fetch(`https://wingme-dev-next-git-main-ujjwal-chadhas-projects.vercel.app/${filePath}`);
+    const res = await fetch(`/${filePath}`);
     if (res.status !== 200) {
       throw new HttpError(res.status, res.statusText)
     }
@@ -28,10 +28,6 @@ export default class GuideDataFetcher {
     }
 
     return filteredGuides[0];
-  }
-
-  static async fetchGuideContent(query: string) {
-
   }
 
   static async fetchGuideMarkdown(query: string): Promise<string> {
