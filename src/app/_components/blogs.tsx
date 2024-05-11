@@ -34,7 +34,7 @@ export const Blogs = async () => {
               guidesMeta.map((items, key) => (
                 <li className="w-full mx-auto group sm:max-w-sm" key={key}>
                   <Link href={`/guides/${items.fileName}`}>
-                    <Image src={items.imageUrl ?? ""} loading="lazy" alt={items.name} className="w-full rounded-lg" />
+                    <img src={items.imageUrl ?? ""} loading="lazy" alt={items.name} className="w-full rounded-lg" />
                     <div className="mt-3 space-y-2">
                       <span className="block text-indigo-600 text-sm">{items.author[0]}</span>
                       <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">

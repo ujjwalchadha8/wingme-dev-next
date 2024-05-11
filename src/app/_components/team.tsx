@@ -4,7 +4,7 @@ export const Team = () => {
 
   const team = [
     {
-        avatar: "dp.jpg",
+        avatar: "/dp.jpg",
         name: "Ujjwal Chadha",
         title: "Senior Fullstack Developer",
         desc: "Ujjwal has 8+ years of experience as a developer. He is ex Microsoft SDE and has lived in the US for 5+ years.",
@@ -12,7 +12,7 @@ export const Team = () => {
         twitter: "javascript:void(0)",
     },
     {
-        avatar: "shalini_sapra.jpeg",
+        avatar: "/shalini_sapra.jpeg",
         name: "Shalini Sapra",
         title: "Senior Program Manager",
         desc: "Shalini has been in the IT industry for 20+ years and knows the jobs and intervies inside out.",
@@ -20,7 +20,7 @@ export const Team = () => {
         twitter: "javascript:void(0)",
     },
     {
-        avatar: "dhruv_dua.jpeg",
+        avatar: "/dhruv_dua.jpeg",
         name: "Dhruv Dua",
         title: "Data Engineer",
         desc: "Dhruv is a Data Engineer with 7+ years of experience in the industry. He excels in AI, ",
@@ -28,7 +28,7 @@ export const Team = () => {
         twitter: "javascript:void(0)",
     },
     {
-        avatar: "shailesh_gupta.jpeg",
+        avatar: "/shailesh_gupta.jpeg",
         name: "Shailesh Gupta",
         title: "Software Engineer - 2",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -56,6 +56,8 @@ export const Team = () => {
                                   <div className="w-72 h-60">
                                       <Image
                                           src={item.avatar}
+                                          width={200}
+                                          height={400}
                                           className="w-full h-full object-cover object-center shadow-md rounded-xl"
                                           alt=""
                                       />

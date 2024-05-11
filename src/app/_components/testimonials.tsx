@@ -4,19 +4,19 @@ export const Testimonials = () => {
 
   const testimonials = [
       {
-          avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+          avatar: "/dp.jpg",
           name: "Mohit Gulati",
           title: "Founder of meta",
           quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae."
       },
       {
-          avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+          avatar: "/dp.jpg",
           name: "Shilpy Khanna",
           title: "Software engineer",
           quote: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
       },
       {
-          avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+          avatar: "/dp.jpg",
           name: "Ashwin Ramdas",
           title: "Product designer",
           quote: "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain."
@@ -51,7 +51,7 @@ export const Testimonials = () => {
                                           </p>
                                       </blockquote>
                                       <div className="flex items-center gap-x-4 p-4 mt-6 bg-indigo-50">
-                                          <Image width={16} src={item.avatar} alt={item.name} className="w-16 h-16 rounded-full border-2 border-indigo-500" />
+                                          <Image width={16} height={16} src={item.avatar} alt={item.name} className="w-16 h-16 rounded-full border-2 border-indigo-500" />
                                           <div>
                                               <span className="block text-gray-800 font-semibold">{item.name}</span>
                                               <span className="block text-indigo-600 text-sm mt-0.5">{item.title}</span>

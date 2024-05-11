@@ -51,7 +51,7 @@ export const Hero = () => {
                   </p>
               </blockquote>
               <div className="mt-2">
-                  <Image width={10} alt="Person" src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" className="w-10 h-10 mx-auto rounded-full" />
+                  <Image width={10} height={10} alt="Person" src="/dp.jpg" className="w-10 h-10 mx-auto rounded-full" />
                   <div className="mt-3">
                       <span className="block text-gray-800 font-semibold">- Chirag Jain</span>
                       <span className="block text-gray-800 text-sm mt-0.5">Software Developer at Meta</span>
