@@ -1,19 +1,22 @@
+import fetch from 'node-fetch';
 import { GuideMetadata } from "../model/GuideMetadata";
 import HttpError from "../utils/HttpError";
-
+import { promises as fs } from 'fs';
 
 export default class GuideDataFetcher {
 
   private static async fetchFileContent(filePath: string): Promise<string> {
-    const fileRoot = //process.env.resourcify_is_local_build == "true" ? "http://localhost:5000" : 
-      // `https://resourcifyme.web.app`;
-      "";
+    // const fileRoot = //process.env.resourcify_is_local_build == "true" ? "http://localhost:5000" : 
+    //   // `https://resourcifyme.web.app`;
+    //   "";
 
-    const res = await fetch(`/${filePath}`);
-    if (res.status !== 200) {
-      throw new HttpError(res.status, res.statusText)
-    }
-    return await res.text();
+    // const res = await fetch(`https://wingme-dev-next-git-main-ujjwal-chadhas-projects.vercel.app/${filePath}`);
+    // if (res.status !== 200) {
+    //   throw new HttpError(res.status, res.statusText)
+    // }
+    // return await res.text();
+
+    return await fs.readFile(process.cwd() + `/src/app/_server_assets/${filePath}`, 'utf8');
   }
 
   static async fetchAllGuidesMetadata(): Promise<GuideMetadata[]> {
