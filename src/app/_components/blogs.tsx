@@ -4,15 +4,16 @@ import Image from "next/image";
 
 export const Blogs = async () => {
 
-  const guidesMeta = await GuideDataFetcher.fetchAllGuidesMetadata();
+  const guidesMeta = (await GuideDataFetcher.fetchAllGuidesMetadata()).splice(0, 4);
 
   return (
     <>
       <section className="py-32">
-        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-          <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
-            <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">Latest blog posts</h1>
-            <p className="text-gray-600">Blogs that are loved by the community. Updated every hour.</p>
+        <div className="max-w-screen-xl mx-auto pr-4 pl-4 ml-4 md:pr-8 md:pl-10 md:ml-10 border-l-2">
+          <div className="space-y-4 sm:text-center sm:max-w-md sm:mx-auto">
+            <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">Blogs</h1>
+            <p><Link href="/guides" className="text-gray-600">View All</Link></p>
+            {/*
             <form className="items-center justify-center gap-3 sm:flex">
               <div className="relative">
                 <svg className="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -27,9 +28,9 @@ export const Blogs = async () => {
               <button className="block w-full mt-3 py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow sm:mt-0 sm:w-auto">
                 Subscribe
               </button>
-            </form>
+            </form> */}
           </div>
-          <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-x-8 gap-y-10 mt-8 sm:grid-cols-2 lg:grid-cols-2">
             {
               guidesMeta.map((items, key) => (
                 <li className="w-full mx-auto group sm:max-w-sm" key={key}>
@@ -40,7 +41,7 @@ export const Blogs = async () => {
                       <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">
                         {items.name}
                       </h3>
-                      <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">{items.description}</p>
+                      {/* <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">{items.description}</p> */}
                     </div>
                   </Link>
                 </li>

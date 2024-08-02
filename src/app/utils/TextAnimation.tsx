@@ -2,18 +2,20 @@
 
 import { useEffect, useState } from "react";
 
-export const TextAnimation = ({text}: {text: string}) => {
+export const TextAnimation = ({texts}: {texts: string[]}) => {
 
-  const [textDisplayed, setTextDisplayed] = useState('');
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [textIndex, setTextIndex] = useState(0);
 
   useEffect(() => {
-    // setInterval(() => {
-    //   console.log(`setting ${textDisplayed.length}`);
-    //   setTextDisplayed(textDisplayed => textDisplayed.length == text.length ? "" : textDisplayed + text.at(textDisplayed.length));
-    // }, 70);
+    setInterval(() => {
+      setIsAnimating(isAnimating => !isAnimating);
+    }, 1000);
   }, []);
 
   return (
-    <span>{text}</span>
+    <p className={"text-2xl text-gray-700 mt-5 text-center " + (isAnimating ? "animate-flip" : "")}>
+      Only 3 out of 100 resumes result in an interview.
+    </p>
   )
 }
